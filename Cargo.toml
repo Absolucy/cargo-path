@@ -1,0 +1,23 @@
+[package]
+name = "cargo-path"
+version = "0.0.0"
+authors = ["Casey Rodarmor <casey@rodarmor.com>"]
+autotests = false
+categories = ["command-line-utilities", "development-tools"]
+description = "Print path to local Rust dependencies"
+edition = "2024"
+homepage = "https://github.com/casey/cargo-path"
+keywords = ["command-line", "development", "utility"]
+license = "CC0-1.0"
+repository = "https://github.com/casey/cargo-path"
+
+[[test]]
+name = "integration"
+
+[dependencies]
+cargo_metadata = "0.23.1"
+clap = { version = "4.6.1", features = ["derive", "unstable-styles"] }
+snafu = "0.9.0"
+
+[dev-dependencies]
+regex = "1.12.3"
